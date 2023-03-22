@@ -21,6 +21,7 @@
 		E1D8D35329C9DCA20033C05A /* CarShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8D35229C9DCA20033C05A /* CarShareTests.swift */; };
 		E1D8D35D29C9DCA20033C05A /* CarShareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8D35C29C9DCA20033C05A /* CarShareUITests.swift */; };
 		E1D8D35F29C9DCA20033C05A /* CarShareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8D35E29C9DCA20033C05A /* CarShareUITestsLaunchTests.swift */; };
+		E1D8D37E29C9F03C0033C05A /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D8D37D29C9F03C0033C05A /* Authentication.storyboard */; };
 		E1D8D38F29C9F27E0033C05A /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1D8D38229C9F27E0033C05A /* Roboto-Medium.ttf */; };
 		E1D8D39029C9F27E0033C05A /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1D8D38329C9F27E0033C05A /* Roboto-Light.ttf */; };
 		E1D8D39129C9F27E0033C05A /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1D8D38429C9F27E0033C05A /* Roboto-Regular.ttf */; };
@@ -78,6 +79,15 @@
 		E1D8D35829C9DCA20033C05A /* CarShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarShareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D8D35C29C9DCA20033C05A /* CarShareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarShareUITests.swift; sourceTree = "<group>"; };
 		E1D8D35E29C9DCA20033C05A /* CarShareUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarShareUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E1D8D37129C9E4DF0033C05A /* JSON - Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON - Date.swift"; sourceTree = "<group>"; };
+		E1D8D37229C9E5190033C05A /* CSBillInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSBillInfo.swift; sourceTree = "<group>"; };
+		E1D8D37329C9E5190033C05A /* CSModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSModel.swift; sourceTree = "<group>"; };
+		E1D8D37429C9E5190033C05A /* CSUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSUser.swift; sourceTree = "<group>"; };
+		E1D8D37629C9E63E0033C05A /* CSActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSActivityIndicator.swift; sourceTree = "<group>"; };
+		E1D8D37729C9E63E0033C05A /* CSLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSLocalStorage.swift; sourceTree = "<group>"; };
+		E1D8D37829C9E63E0033C05A /* CSAuthenticator - Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSAuthenticator - Helpers.swift"; sourceTree = "<group>"; };
+		E1D8D37929C9E63E0033C05A /* CSAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAuthenticator.swift; sourceTree = "<group>"; };
+		E1D8D37D29C9F03C0033C05A /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		E1D8D38229C9F27E0033C05A /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		E1D8D38329C9F27E0033C05A /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		E1D8D38429C9F27E0033C05A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -172,11 +182,13 @@
 		E1D8D33A29C9DCA10033C05A /* CarShare */ = {
 			isa = PBXGroup;
 			children = (
-				E1D8D33D29C9DCA10033C05A /* SceneDelegate.swift */,
-				E1D8D33F29C9DCA10033C05A /* ViewController.swift */,
-				E1D8D34129C9DCA10033C05A /* Main.storyboard */,
 				E1D8D39C29C9F7310033C05A /* MetaData */,
 				E1D8D36F29C9E4200033C05A /* AppDelegate */,
+				E1D8D37029C9E4360033C05A /* Coordinators */,
+				E1D8D36E29C9E4170033C05A /* Entities */,
+				E1D8D37529C9E6330033C05A /* Interactors */,
+				E1D8D36D29C9E40E0033C05A /* Utilities */,
+				E1D8D36C29C9E4010033C05A /* UI Files */,
 				E1D8D34429C9DCA20033C05A /* Assets.xcassets */,
 				E1D8D34629C9DCA20033C05A /* LaunchScreen.storyboard */,
 			);
@@ -200,6 +212,34 @@
 			path = CarShareUITests;
 			sourceTree = "<group>";
 		};
+		E1D8D36C29C9E4010033C05A /* UI Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8D37A29C9F0160033C05A /* Authentication */,
+				E1D8D33F29C9DCA10033C05A /* ViewController.swift */,
+				E1D8D34129C9DCA10033C05A /* Main.storyboard */,
+			);
+			path = "UI Files";
+			sourceTree = "<group>";
+		};
+		E1D8D36D29C9E40E0033C05A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8D37129C9E4DF0033C05A /* JSON - Date.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E1D8D36E29C9E4170033C05A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8D37229C9E5190033C05A /* CSBillInfo.swift */,
+				E1D8D37329C9E5190033C05A /* CSModel.swift */,
+				E1D8D37429C9E5190033C05A /* CSUser.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		E1D8D36F29C9E4200033C05A /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +249,32 @@
 				E1D8D33D29C9DCA10033C05A /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E1D8D37029C9E4360033C05A /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		E1D8D37529C9E6330033C05A /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8D37629C9E63E0033C05A /* CSActivityIndicator.swift */,
+				E1D8D37829C9E63E0033C05A /* CSAuthenticator - Helpers.swift */,
+				E1D8D37929C9E63E0033C05A /* CSAuthenticator.swift */,
+				E1D8D37729C9E63E0033C05A /* CSLocalStorage.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		E1D8D37A29C9F0160033C05A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8D37D29C9F03C0033C05A /* Authentication.storyboard */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		E1D8D37F29C9F2670033C05A /* Resources */ = {
@@ -382,6 +448,7 @@
 				E1D8D39B29C9F27E0033C05A /* Roboto-Black.ttf in Resources */,
 				E1D8D39829C9F27E0033C05A /* Roboto-BlackItalic.ttf in Resources */,
 				E1D8D39129C9F27E0033C05A /* Roboto-Regular.ttf in Resources */,
+				E1D8D37E29C9F03C0033C05A /* Authentication.storyboard in Resources */,
 				E1D8D39729C9F27E0033C05A /* LICENSE.txt in Resources */,
 				E1D8D39029C9F27E0033C05A /* Roboto-Light.ttf in Resources */,
 				E1D8D3A129C9F7900033C05A /* GoogleService-Info.plist in Resources */,
