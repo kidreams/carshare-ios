@@ -66,6 +66,7 @@
 		CC986804CF61DD9982C629FA /* Pods-CarShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarShareTests.release.xcconfig"; path = "Target Support Files/Pods-CarShareTests/Pods-CarShareTests.release.xcconfig"; sourceTree = "<group>"; };
 		E187133B29CABD5400EC8FA8 /* AppDelegate - Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate - Firebase.swift"; sourceTree = "<group>"; };
 		E187133C29CABD5400EC8FA8 /* AppDelegate - UNUserNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate - UNUserNotification.swift"; sourceTree = "<group>"; };
+		E187133F29CABFAC00EC8FA8 /* CarShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CarShare.entitlements; sourceTree = "<group>"; };
 		E1D8D33829C9DCA10033C05A /* CarShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D8D33B29C9DCA10033C05A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D8D33D29C9DCA10033C05A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +183,7 @@
 		E1D8D33A29C9DCA10033C05A /* CarShare */ = {
 			isa = PBXGroup;
 			children = (
+				E187133F29CABFAC00EC8FA8 /* CarShare.entitlements */,
 				E1D8D39C29C9F7310033C05A /* MetaData */,
 				E1D8D36F29C9E4200033C05A /* AppDelegate */,
 				E1D8D37029C9E4360033C05A /* Coordinators */,
@@ -783,6 +785,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CarShare/CarShare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EFQ48P27T4;
@@ -812,6 +815,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CarShare/CarShare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EFQ48P27T4;
