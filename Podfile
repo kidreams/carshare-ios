@@ -7,7 +7,10 @@ target 'CarShare' do
   use_frameworks!
 
   # Pods for CarShare
-
+  
+  # add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
   # Add the pod for Firebase Cloud Messaging
   pod 'Firebase/Messaging'
 
