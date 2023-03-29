@@ -112,6 +112,7 @@ class CSAuthenticator: NSObject {
     
     private
     func isSignedIn() -> Bool {
+//        return true // TODO: Debug only
         var authenticated: Bool = false
         if let _token = userToken {
             authenticated = _token.count > 0

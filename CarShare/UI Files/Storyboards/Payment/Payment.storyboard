@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Payment Method View Controller-->
+        <scene sceneID="Bmg-9k-pDb">
+            <objects>
+                <viewController storyboardIdentifier="PaymentMethodViewController" id="eQj-zg-x9X" customClass="PaymentMethodViewController" customModule="CarShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ba-df-2ui">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vUM-AM-1oj">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="eQj-zg-x9X" id="OGN-u5-OMi"/>
+                                    <outlet property="delegate" destination="eQj-zg-x9X" id="YTh-pJ-4Jp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7xs-5m-wx4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7xs-5m-wx4" firstAttribute="trailing" secondItem="vUM-AM-1oj" secondAttribute="trailing" id="5hi-hP-p2s"/>
+                            <constraint firstItem="vUM-AM-1oj" firstAttribute="top" secondItem="7xs-5m-wx4" secondAttribute="top" id="Ue3-sy-UNc"/>
+                            <constraint firstItem="vUM-AM-1oj" firstAttribute="leading" secondItem="7xs-5m-wx4" secondAttribute="leading" id="cD6-fC-yuZ"/>
+                            <constraint firstItem="7xs-5m-wx4" firstAttribute="bottom" secondItem="vUM-AM-1oj" secondAttribute="bottom" id="cNK-K7-yxf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7IZ-UP-J1s"/>
+                    <connections>
+                        <outlet property="tableView" destination="vUM-AM-1oj" id="kw2-OR-Jyc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7M-z2-nd2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="4"/>
+        </scene>
+        <!--Paypal Payment View Controller-->
+        <scene sceneID="zKO-Qp-te8">
+            <objects>
+                <viewController storyboardIdentifier="PaypalPaymentViewController" id="PHY-Vh-MPL" customClass="PaypalPaymentViewController" customModule="CarShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SoM-nU-chf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h8G-M9-Omw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIA-sD-R9d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2054" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

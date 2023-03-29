@@ -1,5 +1,37 @@
 PODS:
   - Alamofire (5.6.4)
+  - Braintree/ApplePay (5.21.0):
+    - Braintree/Core
+  - Braintree/Card (5.21.0):
+    - Braintree/Core
+  - Braintree/Core (5.21.0)
+  - Braintree/DataCollector (5.21.0):
+    - Braintree/Core
+  - Braintree/PaymentFlow (5.21.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - Braintree/PayPal (5.21.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - Braintree/PayPalDataCollector (5.21.0)
+  - Braintree/ThreeDSecure (5.21.0):
+    - Braintree/Card
+    - Braintree/PaymentFlow
+  - Braintree/UnionPay (5.21.0):
+    - Braintree/Card
+  - Braintree/Venmo (5.21.0):
+    - Braintree/Core
+  - BraintreeDropIn (9.8.1):
+    - Braintree/ApplePay (~> 5.19)
+    - Braintree/Card (~> 5.19)
+    - Braintree/Core (~> 5.19)
+    - Braintree/PayPal (~> 5.19)
+    - Braintree/ThreeDSecure (~> 5.19)
+    - Braintree/UnionPay (~> 5.19)
+    - Braintree/Venmo (~> 5.19)
+  - DatePicker (1.3.1):
+    - Extended
+  - Extended (1.0.5)
   - Firebase/Analytics (10.6.0):
     - Firebase/Core
   - Firebase/Core (10.6.0):
@@ -93,6 +125,12 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30910.0, >= 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleMaps (7.4.0):
+    - GoogleMaps/Maps (= 7.4.0)
+  - GoogleMaps/Base (7.4.0)
+  - GoogleMaps/Maps (7.4.0):
+    - GoogleMaps/Base
+  - GooglePlaces (7.4.0)
   - GoogleUtilities/AppDelegateSwizzler (7.11.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -112,6 +150,8 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.11.0):
     - GoogleUtilities/Logger
+  - IQKeyboardManagerSwift (6.5.11)
+  - Kingfisher (7.6.2)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
     - nanopb/encode (= 2.30909.0)
@@ -123,21 +163,38 @@ PODS:
   - PromisesObjC (2.2.0)
   - PromisesSwift (2.2.0):
     - PromisesObjC (= 2.2.0)
+  - Repeat (0.6.0)
   - SwiftLint (0.50.3)
   - SwiftyJSON (5.0.1)
+  - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Braintree/ApplePay
+  - Braintree/DataCollector
+  - Braintree/ThreeDSecure
+  - BraintreeDropIn
+  - DatePicker
   - Firebase/Analytics
   - Firebase/Crashlytics
   - Firebase/Messaging
+  - GoogleMaps
+  - GooglePlaces
+  - IQKeyboardManagerSwift
+  - Kingfisher
   - NVActivityIndicatorView
+  - Repeat
   - SwiftLint
   - SwiftyJSON
+  - TextFieldEffects
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Braintree
+    - BraintreeDropIn
+    - DatePicker
+    - Extended
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -149,16 +206,26 @@ SPEC REPOS:
     - FirebaseSessions
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleMaps
+    - GooglePlaces
     - GoogleUtilities
+    - IQKeyboardManagerSwift
+    - Kingfisher
     - nanopb
     - NVActivityIndicatorView
     - PromisesObjC
     - PromisesSwift
+    - Repeat
     - SwiftLint
     - SwiftyJSON
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  Braintree: 629e2586433edad0b69a7d2eaba0910b7801db49
+  BraintreeDropIn: 37f70975005ecf391637c998576754f6078d786c
+  DatePicker: 05ddbd2b57d00ce6f44c1f0611ced32f948d33a6
+  Extended: c463225e0c29b2823847866c1b106827772ac678
   Firebase: f13680471b021937f2230ea8503c7809d8c29806
   FirebaseAnalytics: 9f382605c5ee412b039212f054bf7a403d9850c1
   FirebaseCore: fa80ad16a62d52f67274b5b88304c3a318bbf9a4
@@ -170,14 +237,20 @@ SPEC CHECKSUMS:
   FirebaseSessions: 34e5c084da010ef3802cbc062b822e513c9e6318
   GoogleAppMeasurement: 686b48c3c895f3c55c70719041913d5d150b74f6
   GoogleDataTransport: ea169759df570f4e37bdee1623ec32a7e64e67c4
+  GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
+  GooglePlaces: 544e908d94860bf6f8fc1865b80d2c7eb6b5f937
   GoogleUtilities: c2bdc4cf2ce786c4d2e6b3bcfd599a25ca78f06f
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
+  Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   PromisesSwift: cf9eb58666a43bbe007302226e510b16c1e10959
+  Repeat: fd80848f4b3d6f133b18fdee04fd193aff6b31ff
   SwiftLint: 77f7cb2b9bb81ab4a12fcc86448ba3f11afa50c6
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 4e1c7c518319dc57ee99b2a52ee7a8b8f88435ad
+PODFILE CHECKSUM: a534c65e2bd70cabf196f59f0322bff14b5e8f03
 
 COCOAPODS: 1.12.0

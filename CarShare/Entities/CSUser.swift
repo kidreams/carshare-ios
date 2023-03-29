@@ -14,7 +14,7 @@ class CSUser: NSObject, CSModel {
     var userID: Int
     
     var userName: String // D
-    var telNumber: String // D
+    var phoneNumber: String // D
     var email: String // D
     
     var nameInEng: String? // D
@@ -24,41 +24,32 @@ class CSUser: NSObject, CSModel {
     var licenseID: String?
     
     
-    var orders: [CSOrderInfo]
+//    var orders: [CSOrderInfo]
     
     required init?(json: JSON) {
         guard
             let userID: Int         = json["id"].int,
             let userName: String    = json["username"].string,
             let email: String       = json["email"].string,
-            let telNumber: String   = json["tel_number"].string,
-            let contactName: String = json["contact_name"].string,
-            let contactNo: String   = json["contact_number"].string,
-            
+            let phoneNumber: String = json["phone_number"].string,
             let accountNo: String = json["account_number"].string
         
         else
         { return nil }
         
         self.accountNumber  = accountNo
-        self.bankAutoPay    = json["bank_autopay"].boolValue
         
         self.userID         = userID
         
         self.userName       = userName
-        self.telNumber      = telNumber
         self.email          = email
+        self.phoneNumber    = phoneNumber
         
-        self.contactName    = contactName
-        self.contactNumber  = contactNo
         
         self.nameInEng      = json["name_eng"].string
         self.namePrefix     = json["name_prefix"].string
-        self.ebill_email    = json["ebill_email"].string
         
-        self.gasAddress     = json["gas_supply_address"].string
-        
-        self.bills          = json["bills"].tgModelArray().sorted(by: { $0.billingDate > $1.billingDate })
+//        self.orders          = json["orders"].csModelArray().sorted(by: { $0.orderingDate > $1.orderingDate })
         super.init()
     }
 }

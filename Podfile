@@ -8,18 +8,35 @@ target 'CarShare' do
 
   # Pods for CarShare
   
-  # add the Firebase pod for Google Analytics
+  # Add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
+  
   # Add the pod for Firebase Cloud Messaging
   pod 'Firebase/Messaging'
-
+  
+  # Map for car discovery
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  
+  # Payment
+  pod 'BraintreeDropIn'
+  pod 'Braintree/ApplePay'
+  pod 'Braintree/ThreeDSecure'
+  pod 'Braintree/DataCollector'
+  
+  
   # Utilities
   pod 'SwiftyJSON'
   pod 'Alamofire'
+  pod 'Repeat'
   
   # UIs
   pod 'NVActivityIndicatorView'
+  pod 'IQKeyboardManagerSwift'
+  pod 'TextFieldEffects'
+  pod 'Kingfisher'
+  pod 'DatePicker'
 
   # Code formatting best practices
   pod 'SwiftLint'

@@ -62,5 +62,9 @@
 		<string>processing</string>
 		<string>remote-notification</string>
 	</array>
+	<key>NSLocationUsageDescription</key>
+	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
 </dict>
 </plist>

@@ -13,8 +13,15 @@ extension JSON {
             get {
                 guard type == .string,
                       let value: String = self.object as? String else { return nil }
-                return DateFormatter.standard.date(from: value)
-                
+                var newDate: Date?
+                if let _date: Date = DateFormatter.standard.date(from: value) {
+                    newDate = _date
+                } else if let _date: Date = DateFormatter.medium.date(from: value) {
+                    newDate = _date
+                } else if let _date: Date = DateFormatter.extremeDetailed.date(from: value) {
+                    newDate = _date
+                }
+                return newDate
             }
         }
 }

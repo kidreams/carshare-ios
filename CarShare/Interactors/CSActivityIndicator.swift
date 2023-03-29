@@ -43,7 +43,7 @@ final class CSActivityIndicator: NSObject
             let indicator = self.createIndicatorView()
             indicator.blocking = blocking
             self.activityIndicator = indicator
-            
+            self.activateViews.append(indicator)
             UIView.transition(with: parentView,
                               duration: 0.3,
                               options: .transitionCrossDissolve,
@@ -59,6 +59,9 @@ final class CSActivityIndicator: NSObject
         DispatchQueue.main.async
         {
             guard let parentView = self.activityIndicator?.superview else { return }
+            if let indicator = self.activityIndicator {
+                self.activateViews.removeAll(where: { $0 == indicator })
+            }
             
             UIView.transition(with: parentView,
                               duration: 0.3,
@@ -69,6 +72,11 @@ final class CSActivityIndicator: NSObject
                                 })
             self.activityIndicator?.stopAnimating()
         }
+    }
+    
+    func resetIndicators() {
+        activateViews.forEach({$0.removeFromSuperview()})
+        activateViews = []
     }
     
     func createIndicatorView() -> CSActivityView
@@ -139,5 +147,5 @@ class CSActivityView: UIView
 
 extension UIWindow
 {
-    static let mainWindow: UIWindow? = { UIApplication.shared.windows.filter {$0.isKeyWindow}.first }()
+    static var mainWindow: UIWindow? { get { UIApplication.shared.keyWindow } }
 }
