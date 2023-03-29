@@ -76,7 +76,7 @@
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="584-Dd-5Nv">
                                                 <rect key="frame" x="0.0" y="58.999999999999943" width="357" height="1"/>
-                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <color key="backgroundColor" name="progress-bar-color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="V9u-jv-4kM"/>
                                                 </constraints>
@@ -104,7 +104,7 @@
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woP-CS-3Jp">
                                                 <rect key="frame" x="0.0" y="59" width="357" height="1"/>
-                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <color key="backgroundColor" name="progress-bar-color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="eUC-Me-qVp"/>
                                                 </constraints>
@@ -126,16 +126,26 @@
                                     <constraint firstItem="IjO-xF-5jt" firstAttribute="height" secondItem="daZ-j8-Byv" secondAttribute="height" id="l5k-69-9Le"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-in-image" translatesAutoresizingMaskIntoConstraints="NO" id="0Hm-gk-vnl">
+                                <rect key="frame" x="20" y="99.666666666666686" width="353" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="R89-Su-Z9j"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bmu-TT-rnI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3uN-s1-ICI" firstAttribute="top" secondItem="NlS-ch-b50" secondAttribute="bottom" constant="120" id="1zB-aR-RPS"/>
+                            <constraint firstItem="0Hm-gk-vnl" firstAttribute="leading" secondItem="bmu-TT-rnI" secondAttribute="leading" constant="20" id="2QM-gZ-dxL"/>
                             <constraint firstItem="bmu-TT-rnI" firstAttribute="bottom" secondItem="3uN-s1-ICI" secondAttribute="bottom" id="5CH-Rx-QAU"/>
+                            <constraint firstItem="0Hm-gk-vnl" firstAttribute="centerX" secondItem="2ee-eD-OBd" secondAttribute="centerX" id="7En-sP-UrE"/>
                             <constraint firstItem="NlS-ch-b50" firstAttribute="leading" secondItem="bmu-TT-rnI" secondAttribute="leading" constant="20" id="Duc-0L-pya"/>
                             <constraint firstItem="bmu-TT-rnI" firstAttribute="trailing" secondItem="3uN-s1-ICI" secondAttribute="trailing" constant="20" id="Srk-H3-WA3"/>
+                            <constraint firstItem="bmu-TT-rnI" firstAttribute="trailing" secondItem="0Hm-gk-vnl" secondAttribute="trailing" constant="20" id="TIv-R4-SXF"/>
                             <constraint firstItem="3uN-s1-ICI" firstAttribute="leading" secondItem="bmu-TT-rnI" secondAttribute="leading" constant="20" id="Wsd-kM-v0I"/>
                             <constraint firstItem="bmu-TT-rnI" firstAttribute="trailing" secondItem="NlS-ch-b50" secondAttribute="trailing" constant="16" id="jHo-m1-2wz"/>
+                            <constraint firstItem="NlS-ch-b50" firstAttribute="top" secondItem="0Hm-gk-vnl" secondAttribute="bottom" constant="50" id="lzV-QB-Y1W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kM9-gt-TSb"/>
@@ -153,8 +163,9 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="login-in-image" width="641" height="423"/>
+        <namedColor name="progress-bar-color">
+            <color red="0.063000001013278961" green="0.18400000035762787" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="second-button-color">
             <color red="0.55699998140335083" green="0.55699998140335083" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

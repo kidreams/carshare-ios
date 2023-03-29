@@ -61,24 +61,7 @@ extension ReservationViewController {
             .fire()
         self.apiWorker = worker
     }
-    
-//    func updateTransaction() {
-//        guard let transaction: CSBody = makeTransactionRecord() else { return }
-//        self.dismissWorker()
-//        let worker = CSAPIWorker(with: CSEndPoints.updateTransaction(transactionInfo: transaction))?
-//            .prepare()
-//            .when(success: { [weak self] (result) in
-//                // TODO: add transaction did update action
-//                self?.dismissWorker()
-//                self?.updateCars()
-//            })
-//            .when(failure: { [weak self] (error) in
-//                self?.dismissWorker()
-//            })
-//            .fire()
-//        self.apiWorker = worker
-//    }
-    
+        
     func makeTransactionRecord() -> CSBody? {
         guard let carDetail = self.carDetail,
               let startDate = startDate,
