@@ -146,12 +146,12 @@ class CSAPIWorker: NSObject
         notificationFeedback.notificationOccurred(.success)
         printDebug(job: .response(response))
         self.success?(result)
-        if let statusCode = result["statusCode"].int,
+        if let statusCode = result["error"]["status"].int,
            statusCode != 200
         {
-            let title: String = result["error"].stringValue
-            let message = result["message"].arrayValue.first?["messages"].arrayValue.first?["message"].string
-            print(result["message"].arrayValue.first?["messages"].arrayValue.first?["message"].string)
+            let title: String = result["error"]["name"].stringValue
+            let message = result["error"]["message"].string
+            print(result["error"]["message"].string)
             UIApplication.topViewController()?.show(title:title, message: message)
         }
     }

@@ -15,7 +15,7 @@ class OrderViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Orders"
         // Do any additional setup after loading the view.
         prepare(for: tableView)
         fetchCars()

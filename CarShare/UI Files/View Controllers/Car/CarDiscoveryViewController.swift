@@ -16,6 +16,7 @@ import Repeat
 class CarDiscoveryViewController: BaseViewController {
     
     var cars: [CSCarDetail]?
+    var markers: [GMSMarker] = []
     var currentLocation: CLLocation?
     @IBOutlet weak var mapView: GMSMapView!
     
@@ -79,17 +80,22 @@ class CarDiscoveryViewController: BaseViewController {
     
     func update(cars: [CSCarDetail]) {
         self.cars = cars
-        cars.forEach({ [weak self] (car) in
-            let position = CLLocationCoordinate2D(latitude: car.lat, longitude: car.long)
-            let marker = GMSMarker(position: position)
-            
-            marker.icon = UIImage(named: "car-icon")?.mapMarker
-            marker.snippet = String(car.carID)
-            marker.map = self?.mapView
-        })
-
+        self.mapView.clear()
+        self.refreshMarkers(with: cars)
     }
     
+    func refreshMarkers(with cars: [CSCarDetail]) {
+        
+        let markers: [GMSMarker] = cars.compactMap({ [weak self] (car) in
+            let position = CLLocationCoordinate2D(latitude: car.lat, longitude: car.long)
+            let marker = GMSMarker(position: position)
+            marker.snippet = String(car.carID)
+            marker.icon = UIImage(named: "car-icon")?.mapMarker
+            marker.map = self?.mapView
+            return marker
+        })
+        self.markers = markers
+    }
     
     func showCarPreview(car: CSCarDetail) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
