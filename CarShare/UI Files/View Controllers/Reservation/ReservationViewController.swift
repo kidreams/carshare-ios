@@ -52,11 +52,11 @@ class ReservationViewController: BaseViewController {
         self.view.backgroundColor = UIColor(named: "theme-color-light") ?? .white
         
         if let _carDetail = carDetail {
-            self.titleLabel.text = _carDetail.makeAndModel
+            self.titleLabel.text = _carDetail.makeAndModel + "\n\(_carDetail.year ?? "")"
             self.dailyPriceLabel.text =  "\(_carDetail.rentalPrice)"
             self.fuelDistanceLabel.text = "> \(900)km"
             self.fuelTankSizeLabel.text = "> \(50)L"
-            let imageURL: URL? = URL(string: carDetail?.imagePath ?? "")
+            let imageURL: URL? = URL(string: _carDetail.imagePath)
             
             self.carImageView.layoutIfNeeded()
             self.carImageView.layer.cornerRadius = 20

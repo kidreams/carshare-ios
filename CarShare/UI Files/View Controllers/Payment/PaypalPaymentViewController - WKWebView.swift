@@ -142,7 +142,7 @@ extension PaypalPaymentViewController: WKUIDelegate, WKNavigationDelegate {
                 var userInfo = PaymentInfo()
                 userInfo["token"] = token
                 userInfo["PayerID"] = payerID
-                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2),
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1),
                                               execute: { [weak self] in
                     self?.paymentCompletionHandler?(.success, userInfo)
                 })

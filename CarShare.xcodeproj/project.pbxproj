@@ -10,6 +10,9 @@
 		2D90A47BC2D0774BE28AF9AA /* Pods_CarShareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE9B5178B64C46761D87597 /* Pods_CarShareTests.framework */; };
 		51D817D9597C58A2CFC824C2 /* Pods_CarShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3AFD281C98D60B3584234A /* Pods_CarShare.framework */; };
 		A2FA7D44393D52A281BCDFB9 /* Pods_CarShare_CarShareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73395B24184C4565E1B261D0 /* Pods_CarShare_CarShareUITests.framework */; };
+		E110E74C29D4155D00DDC2C2 /* ProfileViewcontroller - UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E110E74B29D4155D00DDC2C2 /* ProfileViewcontroller - UITableView.swift */; };
+		E110E74F29D4160A00DDC2C2 /* CSUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E110E74D29D4160A00DDC2C2 /* CSUserTableViewCell.swift */; };
+		E110E75029D4160A00DDC2C2 /* CSUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E110E74E29D4160A00DDC2C2 /* CSUserTableViewCell.xib */; };
 		E113AD2E29CC918400CB6A63 /* PaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113AD2D29CC918400CB6A63 /* PaymentMethodViewController.swift */; };
 		E113AD3029CC96D000CB6A63 /* CarDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113AD2F29CC96D000CB6A63 /* CarDiscoveryViewController.swift */; };
 		E149C7C529CF56E8001D917D /* App Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149C7C429CF56E8001D917D /* App Constants.swift */; };
@@ -113,6 +116,9 @@
 		B594795B5C6FAD4F8F5B5EB5 /* Pods-CarShare-CarShareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarShare-CarShareUITests.release.xcconfig"; path = "Target Support Files/Pods-CarShare-CarShareUITests/Pods-CarShare-CarShareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA3AFD281C98D60B3584234A /* Pods_CarShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC986804CF61DD9982C629FA /* Pods-CarShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarShareTests.release.xcconfig"; path = "Target Support Files/Pods-CarShareTests/Pods-CarShareTests.release.xcconfig"; sourceTree = "<group>"; };
+		E110E74B29D4155D00DDC2C2 /* ProfileViewcontroller - UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewcontroller - UITableView.swift"; sourceTree = "<group>"; };
+		E110E74D29D4160A00DDC2C2 /* CSUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSUserTableViewCell.swift; sourceTree = "<group>"; };
+		E110E74E29D4160A00DDC2C2 /* CSUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CSUserTableViewCell.xib; sourceTree = "<group>"; };
 		E113AD2D29CC918400CB6A63 /* PaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodViewController.swift; sourceTree = "<group>"; };
 		E113AD2F29CC96D000CB6A63 /* CarDiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDiscoveryViewController.swift; sourceTree = "<group>"; };
 		E149C7C429CF56E8001D917D /* App Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App Constants.swift"; sourceTree = "<group>"; };
@@ -341,6 +347,9 @@
 			isa = PBXGroup;
 			children = (
 				E177768E29D0191300A9DAB7 /* ProfileViewController.swift */,
+				E110E74B29D4155D00DDC2C2 /* ProfileViewcontroller - UITableView.swift */,
+				E110E74D29D4160A00DDC2C2 /* CSUserTableViewCell.swift */,
+				E110E74E29D4160A00DDC2C2 /* CSUserTableViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -665,6 +674,7 @@
 			files = (
 				E1D8D39A29C9F27E0033C05A /* Roboto-Thin.ttf in Resources */,
 				E1D8D38F29C9F27E0033C05A /* Roboto-Medium.ttf in Resources */,
+				E110E75029D4160A00DDC2C2 /* CSUserTableViewCell.xib in Resources */,
 				E1D8D39629C9F27E0033C05A /* Roboto-Italic.ttf in Resources */,
 				E1D8D39929C9F27E0033C05A /* Roboto-Bold.ttf in Resources */,
 				E1D8D39529C9F27E0033C05A /* Roboto-LightItalic.ttf in Resources */,
@@ -889,6 +899,7 @@
 				E1E1461429CC6274006E2713 /* Dateformatter.swift in Sources */,
 				E177769829D01F9500A9DAB7 /* OrderListTableViewCell.swift in Sources */,
 				E1E1460229CC5E87006E2713 /* CSAPIWorker.swift in Sources */,
+				E110E74C29D4155D00DDC2C2 /* ProfileViewcontroller - UITableView.swift in Sources */,
 				E1E145F729CC5E65006E2713 /* CSAuthenticator - Helpers.swift in Sources */,
 				E149C7C529CF56E8001D917D /* App Constants.swift in Sources */,
 				E17776A329D03B9F00A9DAB7 /* PaymentMethodViewController - UITableView.swift in Sources */,
@@ -904,6 +915,7 @@
 				E1E145FF29CC5E87006E2713 /* CSEndPoints - Payment.swift in Sources */,
 				E1E94DBD29D3238A008FA7A3 /* UIImage - marker.swift in Sources */,
 				E1E94DC329D34875008FA7A3 /* CarPreviewViewController.swift in Sources */,
+				E110E74F29D4160A00DDC2C2 /* CSUserTableViewCell.swift in Sources */,
 				E14F562529CCAB3700250912 /* UIApplication - utilities.swift in Sources */,
 				E187133E29CABD5400EC8FA8 /* AppDelegate - Firebase.swift in Sources */,
 				E177769229D01DC000A9DAB7 /* OrderViewController.swift in Sources */,
