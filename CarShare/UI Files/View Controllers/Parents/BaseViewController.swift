@@ -9,6 +9,7 @@ import UIKit
 
 class BaseViewController: UIViewController {
     var apiWorker: CSAPIWorker?
+    var apiWorkers: [CSAPIWorker] = []
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -29,6 +30,16 @@ class BaseViewController: UIViewController {
     func dismissWorker() {
         self.apiWorker?.retire()
         self.apiWorker = nil
+    }
+    internal
+    func add(worker: CSAPIWorker) {
+        apiWorkers.append(worker)
+    }
+    
+    internal
+    func dismissWorkers() {
+        apiWorkers.forEach({$0.retire()})
+        apiWorkers = []
     }
     
     deinit {

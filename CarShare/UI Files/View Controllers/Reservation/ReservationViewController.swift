@@ -44,6 +44,9 @@ class ReservationViewController: BaseViewController {
     var startDate: Date?
     var endDate: Date?
     
+    
+    let workerGroup: DispatchGroup = DispatchGroup()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
